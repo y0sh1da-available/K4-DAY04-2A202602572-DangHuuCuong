@@ -203,8 +203,8 @@ Failure còn lại là G03, G05 và G09 trong group eval, tương ứng với mi
 - **Điều tôi học được từ phần việc này:** Hiểu sâu về bản chất "Prompt chính là Code" trong xây dựng AI Agent, sự cần thiết của việc đo lường hành vi bằng traces và metrics thực nghiệm thay vì chỉnh sửa cảm tính.
 - **Nếu làm lại, tôi sẽ cải thiện điều gì:** Bổ sung thêm các ví dụ few-shot có cấu trúc cho các trường hợp ranh giới mơ hồ giữa chính sách IT và chẩn đoán thiết bị.
 
-### Họ tên — MSSV
-Nguyễn Minh Đức — 2A202602783 (GitHub: @minhduckx2004)
+
+### Nguyễn Minh Đức — MSSV: 2A202602783 (GitHub: @minhduckx2004)
 
 - **Vai trò/phần việc được nhận:** Vai trò B (Tool & Schema Engineer) - Đảm nhiệm việc rà soát và chuẩn hóa kiến trúc Schema cho hệ thống công cụ của Agent.
 - **Những gì tôi đã thay đổi trong repo chung:**
@@ -213,7 +213,7 @@ Nguyễn Minh Đức — 2A202602783 (GitHub: @minhduckx2004)
     * `tools.yaml` (Nguồn chân lý cho toàn bộ cấu trúc Tools)
     * `tools/clarify.py`, `tools/inspect_device.py`, `tools/create_ticket.py` và các file tool khác (nơi đã xóa biến `SCHEMA`).
 - **Commit hash hoặc pull request:** 
-    * *(Bạn điền mã commit hoặc link PR của bạn vào đây, ví dụ: `commit 8f3a9b2...` hoặc `PR #3`)*
+    * * 1b34beb at NgMinhDuc
 - **Một quyết định kỹ thuật tôi đã đưa ra và lý do:**
     * **Chuẩn hóa và đồng bộ Schema (Source of Truth):** Tôi đã tiến hành rà soát toàn bộ logic Python trong thư mục `tools/` và quyết định xóa bỏ hoàn toàn biến `SCHEMA` nằm rải rác ở cuối các file Python để chuyển đổi sang định dạng YAML, quy tụ chúng về file `tools.yaml`.
     * **Lý do:** Mục tiêu là biến file `tools.yaml` thành cấu hình gốc duy nhất (source of truth) cho Agent. Điều này giải quyết triệt để tình trạng lệch pha (drift) giữa khai báo tham số của Agent và logic code thực thi. Bằng cách này, nhóm Prompt (Vai trò A) và nhóm Test (Vai trò C) có một tài liệu chuẩn duy nhất để tham chiếu, tránh được các lỗi runtime do truyền sai định dạng.
